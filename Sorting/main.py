@@ -3,7 +3,6 @@ from random import *
 # seed random number generator
 seed(1)
 list = [] # List before sorting
-# generate random numbers between 0-1
 for _ in range(10):
 	list.append(randint(0,100))
 
