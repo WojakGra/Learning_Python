@@ -38,7 +38,7 @@ Characters = {
 }
 
 # Funkcja do pobierania value z key w słowniku
-def get_key(val):
+def GetKey(val):
     for key, value in Characters.items():
         if val == value:
             return key
@@ -53,12 +53,12 @@ for x in range(len(inputList)):
     characterNumber = Characters.get(inputList[x]) + inputNumber
     if(characterNumber > 34):
         characterNumber -= 35
-        outputList.append(get_key(characterNumber))
+        outputList.append(GetKey(characterNumber))
     elif(characterNumber < 0):
         characterNumber += 35
-        outputList.append(get_key(characterNumber))
+        outputList.append(GetKey(characterNumber))
     else:
-        outputList.append(get_key(characterNumber))
+        outputList.append(GetKey(characterNumber))
 
 # Wypisanie wyniku
 for i in outputList:
