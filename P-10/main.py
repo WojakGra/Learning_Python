@@ -15,6 +15,7 @@ def ChangeContrast(image, change):
     return newimage
 
 # Wprowadzanie danych
+print("Plik powinien znajdować się w tym samym folderze, co plik wykonawczy!")
 inputUser = input("Podaj nazwę pliku razem z rozszerzeniem bmp: ")
 changeInt = float(input("Podaj liczbę o ile chcesz zmienić kontrast: "))
 inputUser = inputUser.split('.bmp')
