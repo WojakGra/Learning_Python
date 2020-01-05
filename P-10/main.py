@@ -15,8 +15,11 @@ def ChangeContrast(image, change):
     return newimage
 
 # Wprowadzanie danych
-inputImage = Image.open('koala.bmp')
+inputUser = input("Podaj nazwę pliku razem z rozszerzeniem bmp: ")
 changeInt = float(input("Podaj liczbę o ile chcesz zmienić kontrast: "))
+inputUser = inputUser.split('.bmp')
+inputImage = Image.open(inputUser[0]+'.bmp')
 
 # Wyprowadzanie danych
-ChangeContrast(inputImage, changeInt).save('koala-wynik.bmp')
+ChangeContrast(inputImage, changeInt).save(inputUser[0]+'-wynik.bmp')
+print("Plik został zapisany jako: "+inputUser[0]+'-wynik.bmp')
