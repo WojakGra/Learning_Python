@@ -80,3 +80,6 @@ for move in range(-35, 36):
         for output in outputList:
             print(str(output), end="")
         found = False
+
+# Wstrzymanie programu
+input("\n\nWciśnij Enter, aby kontynuować...")
