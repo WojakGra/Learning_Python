@@ -24,3 +24,6 @@ inputImage = Image.open(inputUser[0]+'.bmp')
 # Wyprowadzanie danych
 ChangeContrast(inputImage, changeInt).save(inputUser[0]+'-wynik.bmp')
 print("Plik został zapisany jako: "+inputUser[0]+'-wynik.bmp')
+
+# Wstrzymanie programu
+input("\n\nWciśnij Enter, aby kontynuować...")
