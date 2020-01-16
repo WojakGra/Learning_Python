@@ -37,5 +37,5 @@ inputUser = inputUser.split()
 
 # Wyprowadzanie danych
 ChangeContrast(ChangeDecToBin(inputUser), changeInt)
-print("Ilość jaśnieszych pikseli to "+str(lighter))
+print("Ilość jaśniejszych pikseli to "+str(lighter))
 print("Ilość ciemniejszych pikseli to "+str(darker))
