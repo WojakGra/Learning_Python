@@ -3,7 +3,7 @@ from django.db import models
 
 class Post(models.Model):
     link = models.CharField(max_length=500, unique=True)
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(blank=True, unique=True)
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:

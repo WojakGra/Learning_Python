@@ -5,6 +5,11 @@
     <title>Homepage</title>
 </head>
 <body>
-<h1>Hi</h1>
+<h1>Create a Post </h1>
+<form action="" method="POST">
+{% csrf_token %}
+Title: <input type="text" name="link"/><input type="submit" value="Post"/>
+</form>
+{% if outside_link %}<a href="http://127.0.0.1:8000/{{ outside_link }}">127.0.0.1:8000/{{ outside_link }}</a>{% endif %}
 </body>
 </html>
