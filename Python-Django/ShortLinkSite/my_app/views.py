@@ -3,7 +3,6 @@ from django.core.validators import URLValidator
 from django.core.exceptions import ValidationError
 from .models import Post
 from my_app.utils import random_string_generator
-import socket
 
 
 def slug_generator(instance, new_slug=None):
@@ -27,14 +26,6 @@ def return_link(request, slug):
         return redirect(home, permanent=True)
 
 
-def get_domain_name():
-    try:
-        host_name = socket.gethostname()
-        return host_name
-    except:
-        print("Unable to get Hostname")
-
-
 def home(request):
     if request.method == 'POST':
         if request.POST.get('link'):
@@ -42,7 +33,6 @@ def home(request):
                 slug_exists = Post.objects.get(link=request.POST.get('link'))
                 stuff_for_frontend = {
                     "outside_link":slug_exists.slug,
-                    "domain_name":get_domain_name(),
                 }
                 return render(request, 'base.html', stuff_for_frontend)
 
@@ -62,8 +52,6 @@ def home(request):
 
             stuff_for_frontend = {
                 "outside_link":post.slug,
-                "domain_name":get_domain_name(),
             }
             return render(request, 'base.html', stuff_for_frontend)
-    else:
-        return render(request, 'base.html')
+    return render(request, 'base.html')
